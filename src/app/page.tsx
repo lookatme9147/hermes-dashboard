@@ -192,18 +192,20 @@ export default function DashboardPage() {
           </div>
         </section>
 
-        {/* Live Console & Report Section */}
+        {/* Report Library & Live Console Section */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-2">
+          {/* Report Viewer (Wider Column: 2/3) */}
           <div className="lg:col-span-2">
+            <ReportViewer tasks={tasks} />
+          </div>
+
+          {/* Live Execution Console (Narrower Column: 1/3) */}
+          <div className="lg:col-span-1">
             <LiveConsole
               logs={logs}
               onClear={() => setLogs([])}
               activeTaskStatus={activeCount > 0 ? `${activeCount} Task Running` : undefined}
             />
-          </div>
-
-          <div>
-            <ReportViewer tasks={tasks} />
           </div>
         </div>
       </main>

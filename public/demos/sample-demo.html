@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="utf-8"><title>Demo</title>
+<style>
+  body{font-family:sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;margin:0;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff}
+  h1{margin-bottom:8px} button{padding:10px 24px;border:none;border-radius:8px;font-size:16px;cursor:pointer;background:#fff;color:#5b21b6;font-weight:bold}
+  #out{margin-top:20px;font-size:20px;min-height:30px}
+</style></head>
+<body>
+<h1>🎯 Hermes 데모</h1>
+<p>Hermes Agent가 생성한 인터랙티브 HTML</p>
+<button onclick="document.getElementById('out').textContent='🎉 버튼이 클릭됐어요! '+new Date().toLocaleTimeString('ko-KR')">클릭해보세요</button>
+<div id="out"></div>
+</body></html>
